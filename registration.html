@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration form (with bootstrap)</title>
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="hyphen.css">
+  <link rel="stylesheet" type="text/css" href="registration.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="jquery-1.11.3.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="registration.js"></script>
+</head>
+<body>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-5">
+        <span class="span">
+        </span>
+      </div>
+      <div class="col-md-1">
+        <div class="page-header" style="display:flex">
+          <img src="f.jpeg" style="width:100%"><h2>inday</h2><br>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <span class="span">
+        </span>
+      </div>
+      <div class="col-md-3" style="align-items:center">
+        <div class="page-header">
+          <h3>Registration Form</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <span class="span">
+        </span>
+      </div>
+      <div class="col-md-1">
+        <label>Select title</label>
+        <select class="input" id="gender" onclick="selected()">
+          <option></option>
+          <option value="male">Mr.</option>
+          <option value="female">Miss</option>
+          <option value="female">Mrs.</option>
+          <option value="both">Dr.</option>
+        </select>
+        <span class="error" id="selectTitleAlert">Select Title</span>
+      </div>
+      <div class="col-md-3">
+        <label>First Name<sup style="color:red">*</sup></label>
+        <input type="input" class="input" id="firstName" placeholder="First Name" onclick="selectTitle()">
+        <span class="error" id="firstNameAlert">First Name should be given</span>
+      </div>
+      <div class="col-md-3">
+        <label>Last Name<sup style="color:red">*</sup></label>
+        <input type="input" class="input" id="lastName" placeholder="Last Name" onclick="firstName()">
+        <span class="error" id="lastNameAlert">last Name should be given</span>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-2">
+        <span class="span">
+        </span>
+      </div>
+      <div class="col-md-3">
+        <label>Middle Nmae<label class="label" style="font-size:15px">(optional)</label></label>
+        <input type="input" class="input" placeholder="Middle Name" onclick="lastName()">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-2">
+        <span class="span">
+        </span>
+      </div>
+      <div class="col-md-5">
+        <label>Gender &nbsp:</label>
+        <label class="label" style="font-size:15px;">Female</label>
+        <input type="radio" disabled id="female">
+        <label class="label" style="font-size:15px">Male</label>
+        <input type="radio" disabled id="male">
+        <label class="label" style="font-size:15px">Others</label>
+        <input type="radio" disabled id="none">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <span class="span">
+        </span>
+      </div>
+      <div class="col-md-2">
+        <label>Date of Birth<sup>*</sup></label>
+        <input class="input" id="dateOfBirth" placeholder="DOB" onclick="lastName()">
+        <span class="error" id="dateOfBirthAlert">last Name should be given</span>
+      </div>
+      <div class="col-md-2">
+        <label>Age</label>
+        <input class="input input--disabled" id="Age" placeholder="Age" onclick="lastName()">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <span class="span"></span>
+      </div>
+      <div class="col-md-2">
+        <label>Mobile No<sup>*</sup></label>
+        <input class="input" id="mobileNo" placeholder="mobile number" onclick="dateOfBirth()" onchange="mobile()">
+        <span class="error" id="mobileNoAlert">mobile no is mandatory</span>
+        <span class="error" id="correctMobileNoAlert">Mobile no should be 10 digited</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <span class="span"></span>
+      </div>
+      <div class="col-md-3">
+        <label>email<sup>*</sup></label>
+        <input class="input" id="email" placeholder="email" onclick="mobileNo()" onchange="email()">
+        <span class="error" id="emailAlert">email is required</span>
+        <span class="error" id="correctEmailAlert">give a valid email id</span>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-2">
+        <span class="span"></span>
+      </div>
+      <div class="col-md-2">
+        <button class = "btn btn--tertiary btn--large" style="width:100%">cancel</button>
+      </div>
+      <div class="col-md-3">
+        <span class="span"></span>
+      </div>
+      <div class="col-md-2">
+        <button class = "btn btn--success btn--large" style="width:100%">Save</button>
+      </div>
+    </div>
+    <br>
+  </div>
+</body>
+</html>

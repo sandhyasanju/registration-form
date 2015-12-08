@@ -1,0 +1,10 @@
+.container {
+  border: 1px solid grey;
+}
+.error {
+  color: red;
+  display: none;
+}
+sup {
+  color: red;
+}
