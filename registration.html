@@ -13,17 +13,17 @@
   <script src="bootstrap.min.js"></script>
   <script type="text/javascript" src="registration.js"></script>
 </head>
-<body>
-  <div class="container">
-
-    <div class="row">
-      <div class="col-md-5">
+<body onload="clear()">
+  <!-- creating a container to create a registration form-->
+  <div class="container" style="width:50%">
+    <div class="row" style="margin-left:20px">
+      <div class="col-md-4">
         <span class="span">
         </span>
       </div>
-      <div class="col-md-1">
-        <div class="page-header" style="display:flex">
-          <img src="f.jpeg" style="width:100%"><h2>inday</h2><br>
+      <div class="col-md-4">
+        <div style="align-items:center;display:flex">
+          <img src="f.jpeg" style="width: 40%"><h2 style="margin-left:-10px">inday</h2><br>
         </div>
       </div>
     </div>
@@ -32,34 +32,34 @@
         <span class="span">
         </span>
       </div>
-      <div class="col-md-3" style="align-items:center">
+      <div class="col-md-4" style="align-items:center">
         <div class="page-header">
           <h3>Registration Form</h3>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-1">
         <span class="span">
         </span>
       </div>
-      <div class="col-md-1">
+      <div class="col-md-2">
         <label>Select title</label>
-        <select class="input" id="gender" onclick="selected()">
+        <select type="select" class="input" id="gender" onclick="selected()">
           <option></option>
-          <option value="male">Mr.</option>
-          <option value="female">Miss</option>
-          <option value="female">Mrs.</option>
-          <option value="both">Dr.</option>
+          <option>Mr.</option>
+          <option>Miss</option>
+          <option>Mrs.</option>
+          <option>Dr.</option>
         </select>
         <span class="error" id="selectTitleAlert">Select Title</span>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <label>First Name<sup style="color:red">*</sup></label>
         <input type="input" class="input" id="firstName" placeholder="First Name" onclick="selectTitle()">
         <span class="error" id="firstNameAlert">First Name should be given</span>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <label>Last Name<sup style="color:red">*</sup></label>
         <input type="input" class="input" id="lastName" placeholder="Last Name" onclick="firstName()">
         <span class="error" id="lastNameAlert">last Name should be given</span>
@@ -67,22 +67,22 @@
     </div>
     <br>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-1">
         <span class="span">
         </span>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <label>Middle Nmae<label class="label" style="font-size:15px">(optional)</label></label>
-        <input type="input" class="input" placeholder="Middle Name" onclick="lastName()">
+        <input id="middleName" type="input" class="input" placeholder="Middle Name" onclick="lastName()">
       </div>
     </div>
     <br>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-1">
         <span class="span">
         </span>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-8">
         <label>Gender &nbsp:</label>
         <label class="label" style="font-size:15px;">Female</label>
         <input type="radio" disabled id="female">
@@ -93,55 +93,55 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-1">
         <span class="span">
         </span>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-3">
         <label>Date of Birth<sup>*</sup></label>
-        <input class="input" id="dateOfBirth" placeholder="DOB" onclick="lastName()">
-        <span class="error" id="dateOfBirthAlert">last Name should be given</span>
+        <input class="input" id="dateOfBirth" placeholder="yyyymmdd" onclick="lastName()" onchange="age()">
+        <span class="error" id="dateOfBirthAlert">date of birth should be given</span>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-3">
         <label>Age</label>
-        <input class="input input--disabled" id="Age" placeholder="Age" onclick="lastName()">
+        <input class="input input--disabled" id="age" placeholder="Age" onclick="lastName()">
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2">
-        <span class="span"></span>
-      </div>
-      <div class="col-md-2">
-        <label>Mobile No<sup>*</sup></label>
-        <input class="input" id="mobileNo" placeholder="mobile number" onclick="dateOfBirth()" onchange="mobile()">
-        <span class="error" id="mobileNoAlert">mobile no is mandatory</span>
-        <span class="error" id="correctMobileNoAlert">Mobile no should be 10 digited</span>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-1">
         <span class="span"></span>
       </div>
       <div class="col-md-3">
+        <label>Mobile No<sup>*</sup></label>
+        <input class="input" id="mobileNo" placeholder="mobile number" onclick="dateOfBirth()" onchange="mobile()">
+        <span class="error" id="mobileNoAlert">mobile no is mandatory</span>
+        <span class="error" id="correctMobileNoAlert">Mobile no should be 10 digited and not characters</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1">
+        <span class="span"></span>
+      </div>
+      <div class="col-md-5">
         <label>email<sup>*</sup></label>
         <input class="input" id="email" placeholder="email" onclick="mobileNo()" onchange="email()">
         <span class="error" id="emailAlert">email is required</span>
         <span class="error" id="correctEmailAlert">give a valid email id</span>
       </div>
     </div>
-    <br>
+    <br><br><br>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-1">
         <span class="span"></span>
       </div>
       <div class="col-md-2">
-        <button class = "btn btn--tertiary btn--large" style="width:100%">cancel</button>
+        <button id="cancel" class="btn btn--tertiary btn--large" onclick="clear()">Cancel</button>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-6">
         <span class="span"></span>
       </div>
       <div class="col-md-2">
-        <button class = "btn btn--success btn--large" style="width:100%">Save</button>
+        <button id="save" class = "btn btn--success btn--large" style="width:100%">Save</button>
       </div>
     </div>
     <br>
