@@ -114,6 +114,7 @@ function email() {
 function age() {
   var today = new Date();
   var day = $("#dateOfBirth").val();
+  //alert(day);
   var birthDate = day.match(/(\d{4})(\d{2})(\d{2})/);
   var birthDay = new Date(birthDate[1],birthDate[2]-1,birthDate[3]);
   // to check whether the given year is a leap year or not

@@ -1,0 +1,27 @@
+span {
+  margin: 5px;
+}
+table thead th {
+  background: #C0C0C0;
+  cursor: pointer;
+}
+.weeks {
+  background: #6699FF;
+}
+table tbody td {
+  cursor: pointer;
+}
+.p {
+  display: inline;
+}
+.col_color {
+  background: blue;
+  color: white;
+}
+.selected_cell {
+  background: yellow;
+  color: blue;
+}
+.selectedDate {
+  background: grey;
+}

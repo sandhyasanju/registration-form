@@ -8,10 +8,12 @@
   <link href="bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="hyphen.css">
   <link rel="stylesheet" type="text/css" href="registration.css">
+  <link rel="stylesheet" type="text/css" href="datePicker.css">
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
   <script src="jquery-1.11.3.min.js"></script>
   <script src="bootstrap.min.js"></script>
   <script type="text/javascript" src="registration.js"></script>
+  <script type="text/javascript" src="datePicker.js"></script>
 </head>
 <body onload="clear()">
   <!-- creating a container to create a registration form-->
@@ -97,7 +99,7 @@
         <span class="span">
         </span>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3" id="calender">
         <label>Date of Birth<sup>*</sup></label>
         <input class="input" id="dateOfBirth" placeholder="yyyymmdd" onclick="lastName()" onchange="age()">
         <span class="error" id="dateOfBirthAlert">date of birth should be given</span>
